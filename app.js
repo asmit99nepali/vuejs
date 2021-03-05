@@ -3,6 +3,7 @@ new Vue({
 	data:{
 		name:'Asmit Nepali',
 		job:'Developer',
+		website:'google.com',
 	},
 	methods:{
 		greet:function(time){
