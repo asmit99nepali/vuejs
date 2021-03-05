@@ -4,6 +4,7 @@ new Vue({
 		name:'Asmit Nepali',
 		job:'Developer',
 		website:'google.com',
+		websiteTag:'<a href="google.com">Google</a>',
 	},
 	methods:{
 		greet:function(time){
