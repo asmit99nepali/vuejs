@@ -16,10 +16,15 @@
 <body>
 <div id="vue-app">
 	<h1>Event</h1>
-	<button v-on:click="add(1)">Add a year</button>
+
+	<button v-on:click.once="add(1)">Add a year</button>
+	<!-- .once make button click only one time and then it will disable
+	this is called event modifier
+	  -->
 	<button @click="subtract">Subtract a year</button>
 	<p>My Age:{{age}}</p>
 	<div v-on:mousemove="updateXY" id="canvas">{{x}},{{y}}</div>
+	<a  v-on:click.prevent="click" href="https://www.batikacooperative.com">Batika</a>
 </div>
 </body>
 </html>
@@ -44,6 +49,10 @@
 			{
 				this.x=event.offsetX;
 				this.y=event.offsetY;
+			},
+			click:function()
+			{
+				alert('You clicked me');
 			}
 		}
 	});
