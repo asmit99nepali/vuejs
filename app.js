@@ -5,6 +5,7 @@ new Vue({
 		job:'Developer',
 		website:'google.com',
 		websiteTag:'<a href="google.com">Google</a>',
+		age:21,
 	},
 	methods:{
 		greet:function(time){
