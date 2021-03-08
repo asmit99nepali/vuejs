@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Tutorials</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+<div id="vue-app">
+	<h1>KeyBoard Event</h1>
+	<label>Name:</label>
+	<input type="text" name="" v-on:keyup="logName">
+	<label>Age:</label>
+	<input type="text" name="" v-on:keyup="logAge">
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el:"#vue-app",
+		data:{
+			name:'Asmit Nepali',
+			age:21,
+		},
+		methods:{
+			logName:function()
+			{
+				console.log("You Enter Name");
+			},
+			logAge:function()
+			{
+				console.log("You Enter Age");
+			}
+		}
+	});
+</script>
