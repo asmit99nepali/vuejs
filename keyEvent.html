@@ -9,9 +9,9 @@
 <div id="vue-app">
 	<h1>KeyBoard Event</h1>
 	<label>Name:</label>
-	<input type="text" name="" v-on:keyup="logName">
+	<input type="text" name="" v-on:keyup.enter="logName">
 	<label>Age:</label>
-	<input type="text" name="" v-on:keyup="logAge">
+	<input type="text" name="" v-on:keyup.alt.enter="logAge">
 </div>
 </body>
 </html>
