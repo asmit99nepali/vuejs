@@ -6,7 +6,12 @@
 </template>
 
 <script>
+  import Asmit from './Asmit.vue'
+
   export default{
+    components:{
+      'asmit': Asmit
+    },
     data(){
       return{
         title: 'Asmit App',
