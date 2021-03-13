@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Tutorials</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<h1>Multiple Vue Instances</h1>
+	<div id="one-vue-app">
+		<h1>{{ title }}</h1>
+		<p>{{ greet }}</p>
+	</div>
+	<div id="two-vue-app">
+		<h1>{{ title }}</h1>
+		<p>{{ greet }}</p>
+		<button @click="chateTitle">Change Title</button>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+	var one = new Vue({
+		el:'#one-vue-app',
+		data:{
+			title:'Vue App One',
+		},
+		methods:{
+
+		},
+		computed:{
+			greet:function()
+			{
+				return "Hello I'm form App 1";
+			}
+		},
+	});
+
+	var tow = new Vue({
+		el:'#two-vue-app',
+		data:{
+			title:'Vue App Tow'
+		},
+		methods:{
+			chateTitle:function()
+			{
+				one.title="Title Changed !";
+			}
+		},
+		computed:{
+			greet:function()
+			{
+				return "I'm form App2";
+			}
+		},
+	});
+</script>
