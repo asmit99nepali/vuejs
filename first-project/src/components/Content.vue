@@ -11,7 +11,12 @@
 
 <script>
 	export default{
-		props:['superhero'],
+		props:{
+			superhero:{
+				type:Array,
+				required:true,
+			}
+		},
 		data(){
 		  return{
 		  }
