@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Tutorials</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<div id="vue-app">
+	<h1>Loop through list</h1>
+
+	<ul>
+		<li v-for="character in characters">{{ character }}</li>
+	</ul>
+
+	<ul>
+		<li v-for="(info,index) in personal_infos">{{ ++index }} {{ info.email }} - {{info.age}}</li>
+	</ul>
+
+	<!-- Tempalate doesnot repeat with loop -->
+	<!-- If we use other tag then, they will repeat with loop -->
+
+	<template v-for="(character,index) in characters">
+		<h1>{{ character }}</h1>
+	</template>
+
+	<template v-for="(info,index) in personal_infos">
+		<div v-for="(val,key) in info">
+			<p>{{key}} - {{val}}</p>
+		</div>
+	</template>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el:'#vue-app',
+		data:{
+			characters:['Spider Man', 'Dr.Strange','Hulk', 'Iron Man'],
+			personal_infos:[
+				{email:'spidy@gmail.com', age:18},
+				{email:'stranre@gmail.com', age:32},
+				{email:'hulk@gmail.com', age:45},
+				{email:'tony@gmail.com', age:45}
+			]
+		},
+		methods:{
+
+		},
+		computed:{
+
+		}
+	});
+</script>
