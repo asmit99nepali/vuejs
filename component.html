@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Tutorials</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+<div id="vue-app">
+	<h1>Component</h1>
+	<div id="one-vue-app">
+		<greeting></greeting>
+	</div>
+	<div id="two-vue-app">
+		
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+Vue.component('greeting', {
+	template:'<p>Hey there, I am {{ name }}.<button v-on:click="changeName">Change Name</button></p>',
+	data:function()
+	{
+		return{
+			name:'Asmit',
+		}
+	},
+	methods:{
+		changeName:function()
+		{
+			this.name =  "Nepali";
+		}
+	}
+});
+new Vue({
+	el:'#one-vue-app',
+});
+
+new Vue({
+	el:'#two-vue-app',
+});
+</script>
