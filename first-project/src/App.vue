@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-content :superhero="superhero"></app-content>
     <app-footer></app-footer>
   </div>
@@ -22,8 +22,9 @@
               {name:'SpiderMan', speciality:'web', show:false},
               {name:'IronMan', speciality:'Technique', show:false},
               {name:'Hulk', speciality:'Smash', show:false},
-              {name:'Dr.Strang', speciality:'Time Game', show:false},
+              {name:'Dr.Strange', speciality:'Time Game', show:false},
             ],
+            title:"Vue Superhero",
       }
     },
   }

@@ -6,6 +6,8 @@
 				<h3 v-show="hero.show">{{ hero.speciality }}</h3>
 			</li>
 		</ul>
+
+    <button @click="deleteSuperheo">Delete Hero</button>
 	</div>
 </template>
 
@@ -21,6 +23,13 @@
 		  return{
 		  }
 		},
+
+		methods:{
+			deleteSuperheo: function()
+			{
+				this.superhero.pop();
+			}
+		}
 	}
 </script>
 <style type="text/css" scoped>

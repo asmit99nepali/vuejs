@@ -6,11 +6,16 @@
 
 <script>
 	export default{
-	data(){
-	  return{
-	    title: "First Vue App",
-	  }
-	},
+		props: {
+			title: {
+				type:String,
+			}
+		},
+		data(){
+		  return{
+		    title: "First Vue App",
+		  }
+		},
 	}
 </script>
 <style type="text/css" scoped>
