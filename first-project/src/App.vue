@@ -1,27 +1,25 @@
 <template>
   <div>
-      <h1>{{ title }}</h1>
-      <asmit></asmit>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-  import Asmit from './Asmit.vue'
-
+  import Header from './components/Header.vue';
+  import Footer from './components/Footer.vue';
+  import Content from './components/Content.vue';
   export default{
     components:{
-      'asmit': Asmit
+      'app-header': Header,
+      'app-footer': Footer,
+      'app-content': Content,
     },
     data(){
       return{
-        title: 'Asmit App',
+        
       }
     },
   }
 </script>
-
-<style scoped>
-  h1{
-    color: green;
-  }
-</style>
