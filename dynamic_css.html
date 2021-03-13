@@ -4,18 +4,44 @@
 	<title>VueJS Tutorials</title>
 	<link href="style.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<style type="text/css">
+		.available{
+			color: green;
+		}
+	</style>
 </head>
 <body>
 <div id="vue-app">
 	<h1>Dynamic CSS</h1>
     <h2>Example 1</h2>
-    <div v-bind:class="{red: flase, blue: true}"></div>
+    <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
+    	<span>Shreejan</span>
+    </div> -->
     <h2>Example 2</h2>
+    <button v-on:click="available = !available">Toggle Available</button>
+    <div v-bind:class="compClass">
+    	<span>Shreejan</span>
+    </div>
 </div>
 </body>
 </html>
 <script type="text/javascript">
 	new Vue({
 		el:'#vue-app',
+		data:{
+			available:true,
+			nearby:false,
+		},
+		methods:{
+
+		},
+		computed:{
+			compClass:function(){
+				return{
+					available: this.available,
+					nearby: this.nearby,
+				}
+			}
+		},
 	});
 </script>
