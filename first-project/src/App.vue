@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>{{ title }}</h1>
-      <p>{{ greeting()  }}</p>
+      <asmit></asmit>
   </div>
 </template>
 
@@ -9,15 +9,9 @@
   export default{
     data(){
       return{
-        title: 'My First Application',
+        title: 'Asmit App',
       }
     },
-    methods:{
-      greeting:function()
-      {
-        return "Hello world!";
-      }
-    }
   }
 </script>
 
