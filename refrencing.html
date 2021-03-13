@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS Tutorials</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<h1>Refs</h1>
+
+		<div id="one-vue-app">
+			<input type="text" ref="input">
+			<button @click="readRefs">Submit</button>
+			<p>Your Fav Food: {{output}}</p>
+		</div>
+
+		<div id="two-vue-app">
+			
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el:'#vue-app',
+		data:{
+			output:"Food Name"
+		},
+		methods:{
+			readRefs:function()
+			{
+				console.log(this.$refs.input.value);
+				this.output = this.$refs.input.value;
+			}
+		}
+	});
+</script>
