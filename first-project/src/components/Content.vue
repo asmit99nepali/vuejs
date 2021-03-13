@@ -11,16 +11,11 @@
 
 <script>
 	export default{
-	data(){
-	  return{
-	    superhero:[
-	    {name:'SpiderMan', speciality:'web', show:false},
-	    {name:'IronMan', speciality:'Technique', show:false},
-	    {name:'Hulk', speciality:'Smash', show:false},
-	    {name:'Dr.Strang', speciality:'Time Game', show:false},
-	    ]
-	  }
-	},
+		props:['superhero'],
+		data(){
+		  return{
+		  }
+		},
 	}
 </script>
 <style type="text/css" scoped>

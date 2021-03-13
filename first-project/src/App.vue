@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-content></app-content>
+    <app-content :superhero="superhero"></app-content>
     <app-footer></app-footer>
   </div>
 </template>
@@ -18,7 +18,12 @@
     },
     data(){
       return{
-        
+            superhero:[
+              {name:'SpiderMan', speciality:'web', show:false},
+              {name:'IronMan', speciality:'Technique', show:false},
+              {name:'Hulk', speciality:'Smash', show:false},
+              {name:'Dr.Strang', speciality:'Time Game', show:false},
+            ],
       }
     },
   }
