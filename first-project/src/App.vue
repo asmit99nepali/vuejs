@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-content :superhero="superhero"></app-content>
-    <app-footer></app-footer>
+    <app-footer :title="title"></app-footer>
   </div>
 </template>
 
@@ -27,5 +27,11 @@
             title:"Vue Superhero",
       }
     },
+    methods:{
+      updateTitle:function(updatedTitle)
+      {
+        this.title = updatedTitle;
+      }
+    }
   }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <header>
-  	<h1>{{ title }}</h1>
+  	<h1 @click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
@@ -15,6 +15,13 @@
 		  return{
 		    title: "First Vue App",
 		  }
+		},
+		methods:{
+			changeTitle:function()
+			{
+				// this.title="Vue Power";
+				this.$emit('changeTitle','Vue Power');
+			}
 		},
 	}
 </script>
