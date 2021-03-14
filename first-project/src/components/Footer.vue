@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import { bus } from '../main';
 	export default{
 		props:{
 			title:{
@@ -16,6 +17,11 @@
 	    copyright: "Copyright 2021 Vue",
 	  }
 	},
+	created(){
+		bus.$on('titleChanged', (data)=>{
+			this.title = data;
+		});
+	}
 	}
 </script>
 <style type="text/css" scoped>
