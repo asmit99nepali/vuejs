@@ -29,6 +29,31 @@
 			{
 				this.superhero.pop();
 			}
+		},
+		// Lifecycle Hooks
+		beforeCreate()
+		{
+			alert('beforeCreate');
+		},
+		created()
+		{
+			alert('Created');
+		},
+		beforeMount()
+		{
+			alert('beforeMount');
+		},
+		mounted()
+		{
+			alert('Mounted');
+		},
+		beforeUpdate()
+		{
+			alert('beforeUpdate');
+		},
+		updated()
+		{
+			alert('Updated');
 		}
 	}
 </script>
