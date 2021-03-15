@@ -1,18 +1,16 @@
 <template>
   <div>
-    <form-helper>
-      <h2>{{ title }}</h2>
-      <p>I'm the paragraph title</p>
-   </form-helper>
   </div>
 </template>
 
 <script>
-import FormHelper from './components/FormHelper';
+import FormOne from './components/FormOne';
+import FormTwo from './components/FormTwo';
 
 export default{
   components:{
-    'form-helper': FormHelper
+    'form-one': FormOne,
+    'form-two': FormTwo,
   },
   data(){
     return{
